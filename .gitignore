@@ -1,0 +1,5 @@
+runs/
+training/
+__pycache__/
+venv_yolov8/
+*.pt

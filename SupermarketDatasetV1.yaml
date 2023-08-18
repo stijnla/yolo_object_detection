@@ -1,0 +1,109 @@
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ../../datasets/supermarket_dataset  # dataset root dir
+train: train.txt  # train images (relative to 'path')  8219 images
+val: val.txt  # val images (relative to 'path')  588 images
+test: test.txt  # test images (optional)  2936 images
+
+# Classes
+names:
+  0: coca cola
+  1: pindakaasXXL
+  2: zeep rose
+  3: glassex
+  4: handzeep rose
+  5: melk 2 liter
+  6: toiletblok
+  7: ah houdbare melk lactose-vrij
+  8: hak doperwten
+  9: hak kikkererwten
+  10: hak appelmoes
+  11: hak doperwten-worteltjes
+  12: hak sperziebonen
+  13: hak rode bieten
+  14: hak bruine bonen
+  15: hak bruine bonen klein
+  16: ah tuinbonen klein
+  17: ah worteltjes klein
+  18: ah appelmoes
+  19: ah rodekool
+  20: ah tuinbonen
+  21: ah bruine bonen
+  22: ah witte bonen tomaten
+  23: bonduelle kikkererwten
+  24: bonduelle linzen
+  25: bonduelle kidneybonen
+  26: bonduelle kikkererwten
+  27: bonduelle rode bieten
+  28: bonduelle mais
+  29: hoekje yoghurt
+  30: servero appelmoes
+  31: go-tan chilli sauce
+  32: go-tan fish sauce
+  33: go-tan bio soy sauce
+  34: go-tan soy sauce
+  35: ah sweet basil sauce
+  36: ah japanse sesam sauce
+  37: ah teriyaki sauce
+  38: ah sweet-sour sauce
+  39: blue elephant fish sauce
+  40: ah noodles
+  41: hakubaku noodles
+  42: koh-thai rode curry
+  43: koh-thai groene curry
+  44: rijsttafelmix
+  45: conimex kip kerrie
+  46: conimex nasi speciaal
+  47: conimex laos
+  48: zaanse hoeve volle yoghurt
+  49: zaanse hoeve magere yoghurt
+  50: zaanse hoeve vanille yoghurt
+  51: zaanse hoeve magere melk
+  52: zaanse hoeve karne melk
+  53: zaanse hoeve volle melk
+  54: chips
+  55: ben-jerrys ijs
+  56: haagen-dazs ijs
+  57: breyers ijs
+  58: alpro kookroom
+  59: doritos chips
+  60: ah cupcakes
+  61: ah kwarktaart
+  62: ah zandkoekjes
+  63: ah hartige taart
+  64: ah brownie
+  65: ah luchtige cake
+  66: ah pannenkoeken eiwit
+  67: ah pannenkoeken volkoren
+  68: ah pannenkoeken spelt
+  69: home made galaxy cupcakes
+  70: home made kruid cake
+  71: home made chocolate chip
+  72: home made brownies
+  73: home made red velvet
+  74: home made mini cupcakes
+  75: ah cornflakes
+  76: campina houdbare volle melk
+  77: campina houdbare halfvolle melk
+  78: ah houdbare halfvolle melk
+  79: ah houdbare volle melk
+  80: ah biologische karne melk
+  81: ah houdbare magere melk
+  82: ah blanke vla
+  83: ah toiletpapier
+  84: ah toiletpapier extra
+  85: ah bio appelsap
+  86: ah bio sinaasappelsap
+  87: ah basic appelsap
+  88: ah basic ice tea
+  89: ah basic sinaasappelsap
+  90: crystal clear
+  91: arla halfvolle melk
+  92: ah groene thee
+  93: ah hagelslag melk
+  94: ah hagelslag puur
+  95: appelsientje sinaasappelsap
+  96: ah tomaten blik
+  97: ah augurk
+  98: euroma kruiden zak
+  99: pizza
+  100: droge bonen

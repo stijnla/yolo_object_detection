@@ -1,0 +1,44 @@
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ../../datasets/supermarket_datasetV2  # dataset root dir
+train: train.txt  # train images (relative to 'path')  8219 images
+val: val.txt  # val images (relative to 'path')  588 images
+test: test.txt  # test images (optional)  2936 images
+
+# Classes
+names:
+  0: AH_Bio_Houdbare_Halfvolle_Melk
+  1: AH_Brownies
+  2: AH_Cheesecake
+  3: AH_Chocolate_Chip_Cookies
+  4: AH_Fijngesneden_Tomaten
+  5: AH_Halfvolle_Melk
+  6: AH_Hollandse_Bruine_Bonen
+  7: AH_Kwarktaart_Aardbei
+  8: AH_Magere_Melk
+  9: AH_Rodekool
+  10: AH_Sesam_Woksaus
+  11: AH_Sweet_Basil_Woksaus
+  12: AH_Sweet_and_Sour_Woksaus
+  13: AH_Terriyaki_Woksaus
+  14: AH_Volle_Melk
+  15: AH_appelmoes
+  16: Bonduelle_Beluga_Linzen_2_pack
+  17: Bonduelle_Crispy_Mais
+  18: Bonduelle_Kikkererwten_2_pack
+  19: Bonduelle_Rode_Bietenblokjes_2_pack
+  20: Bonduelle_Rode_Kidneybonen_2_pack
+  21: Campina_Halfvolle_Melk
+  22: Campina_Volle_Melk
+  23: Conimex_Kip_Kerrie_Madras
+  24: Conimex_Nasi_Speciaal
+  25: HAK_Bruine_Bonen
+  26: HAK_Rode_Bieten
+  27: HAK_appelmoes
+  28: Kokh_Thai_Groene_Curry
+  29: Kokh_Thai_Rode_Curry
+  30: Servero_Appelmoes
+  31: Zaanse_Hoeve_Halfvolle_Melk
+  32: Zaanse_Hoeve_Halfvolle_Yoghurt
+  33: Zaanse_Hoeve_Magere_Yoghurt
+  34: Zaanse_Hoeve_Volle_Melk
+  35: Zaanse_Hoeve_Volle_Yoghurt

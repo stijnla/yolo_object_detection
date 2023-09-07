@@ -4,3 +4,5 @@ __pycache__/
 venv_yolov8/
 venv_yolo/
 *.pt
+*.pt    
+*.mp4

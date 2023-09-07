@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-# Load YOLO model trained for 10 epochs on SKU-110K-VS dataset
+# Load YOLO model trained on SKU-110K-VS dataset
 model = YOLO('training/yolov6n_SKU-110K-VS/weights/best.pt')
 
 # Validate model on test split

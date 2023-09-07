@@ -8,13 +8,13 @@ else:
     print("Shit?")
 
 
-epochs = 100
-patience = 100
+epochs = 200
+patience = 10
 image_size = 640
 save = True
-save_period = 1
+save_period = 20
 cache = False
-device = 0
+device = (0,1)
 workers = 8
 project = 'training'
 exist_ok = False
@@ -26,16 +26,21 @@ resume = False
 lr0 = 0.01
 lrf = 0.01
 pretrained = False
-batch_size = [4, 4, 4, 4, 4, 4]
+batch_size = [8, 8, 8, 8]
 
-model_names = ['yolov6n.yaml','yolov8n.yaml','yolov6s.yaml', 'yolov8s.yaml','yolov6m.yaml', 'yolov8m.yaml']
+model_names = ['yolov6l.yaml','yolov6s.yaml','yolov6m.yaml', 'yolov6n.yaml']
+model_names = ['yolov6m.yaml', 'yolov6n.yaml', 'yolov6s.yaml']
 
 
-datasets = ['SKU-110K.yaml', 'SKU-110K-VS.yaml', 'supermarket_datasetV2.yaml']
-
+#datasets = ['SKU-110K.yaml', 'SKU-110K-VS.yaml', 'supermarket_datasetV2.yaml']
+datasets = ['SKU-110K-VS.yaml', 'supermarket_datasetV2.yaml']
+torch.cuda.empty_cache()
+gc.collect()
 
 # train models on original SKU-110K dataset, augmented SKU-110K-VS dataset and SupermarketV2 dataset
 for dataset in datasets:
+
+
     for i, model_name in enumerate(model_names):
         model = YOLO(model_name)
         try:
@@ -45,11 +50,17 @@ for dataset in datasets:
         except RuntimeError as e:
             if "out of memory" in str(e):
                 print("CUDA out of memory, skipping to next model...")
+                print(e)
+            else:
+                print("!!!!!")
+                print(e)
+                print("!!!!!")
         # release gpu memory
-        time.sleep(15)
+        time.sleep(2)
         torch.cuda.empty_cache()
         gc.collect()
-        time.sleep(15)
+        time.sleep(2)
+
 
 # train on supermarket_datasetv2 with pretrained SKU-110K and SKU-110K-VS weights
 pretrained = True
@@ -65,11 +76,13 @@ for dataset in datasets:
         except RuntimeError as e:
             if "out of memory" in str(e):
                 print("CUDA out of memory, skipping to next model...")
+        except FileNotFoundError:
+            pass
         # release gpu memory
-        time.sleep(15)
+        time.sleep(2)
         torch.cuda.empty_cache()
         gc.collect()
-        time.sleep(15)
+        time.sleep(2)
 
 
 # Transfer learning
@@ -103,8 +116,10 @@ for fl in frozen_layers:
             except RuntimeError as e:
                 if "out of memory" in str(e):
                     print("CUDA out of memory, skipping to next model...")
+            except FileNotFoundError:
+                pass
             # release gpu memory
-            time.sleep(15)
+            time.sleep(2)
             torch.cuda.empty_cache()
             gc.collect()
-            time.sleep(15)
+            time.sleep(2)

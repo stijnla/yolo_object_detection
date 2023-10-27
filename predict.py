@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 
 # Load YOLO model trained for 10 epochs on SKU-110K-VS dataset
-model = YOLO('training/yolov6s_supermarket_datasetV2/weights/best.pt')
+model = YOLO('training/yolov6n_supermarket_datasetV2/weights/best.pt')
 
 # Perform object detection on an image using the model
 results = model.predict(source='rgb_easy.mp4', show=True, save=False, device=0)

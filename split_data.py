@@ -4,7 +4,7 @@ from os import listdir
 from os.path import isfile, join
 
 # randomly split data in train, val, and test splits
-mypath = '../datasets/supermarket_datasetV2/images'
+mypath = '../datasets/NAME_OF_YOUR_DATASET/images'
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 trainset = []
